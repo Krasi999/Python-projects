@@ -1,2 +1,2 @@
 # Python-projects
-All the projects I have done in Python.
+All the projects I have done on Python during my first semester in Technical University of Sofia.
