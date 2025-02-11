@@ -1,0 +1,68 @@
+products = ['prod1', 'prod2', 'prod3']
+prices = [35.73, 5.8, 599.99]
+sells = [11, 35, 18]
+while True:
+    exit = False
+    opt = input("Избери опция от 1 до 10: ") 
+    if opt == "1":
+        print('Принтирай продуктите')
+        for i in range(len(products)):
+            print(f'{products[i]} - {prices[i]}')
+
+    if opt == "2":
+        print("Добави продукт")
+        prodName = input("Името на продукта, който ще бъде добавен е: ")
+        prodPrice = float(input("Цената на този продукт е: "))
+        products.append(prodName)
+        prices.append(prodPrice)
+
+    if opt == "3":
+        print("Премахни продукт")
+        prodRemove = input("Името на продуктар, който ще бъде премахнат е:")
+        prodIndex = products.index(prodRemove) 
+        products.remove(prodRemove)  
+        prices.pop(prodIndex)
+  
+    if opt == "4":
+         print("Купи продукт")     
+         prodBuy = input("Името на продукта, който ще бъде купен е:")
+         prodQuantity = float(input("Какво количество искаш да купиш:"))     
+         prodIndex = products.index(prodBuy)
+         prodPrice = prices[prodIndex]
+         sells[prodIndex] += prodPrice*prodQuantity
+         print(round(sells[prodIndex]), 3)
+
+    if opt == "5":    
+        print("Брой продажби")
+        inputSell = float(input("Вид продажба: "))
+        print(sells.count(inputSell))
+
+    if opt == "6":
+        print("Продукт с най-ниска цена")
+        prodIndex = prices.index(min(prices))  
+        print(f"{products[prodIndex]}- {min(prices)}")  
+
+    if opt == "7":
+        print("Продукт с най-висока цена")
+        prodIndex = prices.index(max(prices))  
+        print(f"{products[prodIndex]}- {max(prices)}")
+
+    if opt == "8": 
+        print("Ценова граница на продуктите")
+        rangeN = int(input("Начало: "))
+        rangeK = int(input("Край: "))
+        for i in range(len(products)):
+            if prices[i] >= rangeN and prices[i] <= rangeK:
+                print(f"{products[i]} - {prices[i]}")
+
+    if opt == "9":
+        print(f"Общи продажби: {sum(sells)}")  
+
+    if opt == "10" :
+        exit = True
+
+    if exit:
+        break
+
+
+

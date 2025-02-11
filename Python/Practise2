@@ -1,0 +1,68 @@
+#a = input()
+#print("Start: To start the car")
+#print("Stop: To stop the car")
+#print("Quit: To exit")
+#while len(a) > 1:
+#    b = input().upper()
+#   if b == "START":
+#        print("Ready to go!")
+#    elif b == "STOP":
+#        print("The car has stopped!")
+#    elif b == "QUIT":
+#        break
+#    else:
+#        print("I don't understand!")
+#else:
+#    print("Invalid input")
+
+#prices = [10, 20, 30]
+#for i in prices:
+#   i+=i
+#print(i)
+
+#list = [1, 34, 67, 43, 89, 22]
+#num = 0
+#for i in list:
+#    if num < i:
+#        num = i
+#print(num)
+    
+#numbers = [1, 2, 4, 1, 6, 2, 3, 6]
+#uniqes = []
+#for number in numbers:
+#    if number not in uniqes:
+#       uniqes.append(number)
+#print(uniqes)
+
+#numbers = {
+#    "one": "1",
+#    "two": "2",
+#    "tree": "3"
+#}
+#
+#ph = int(input())
+#ph = numbers.keys()
+#print(ph)
+
+#class Person:
+#    def __init__(self, name):
+#        self.name = name
+#    def talk(self):
+#        print("Hi!")
+#
+#pr1 = Person("Jon Smith")
+#print(pr1.name)
+#pr1.talk()
+
+#from Moddule import find_max
+#list = [1, 6, 75, 43, 21]
+#max = find_max(list)
+#print(max)
+#
+#def find_max(list):
+#    num = 0
+#    for i in list:
+#        if num < i:
+#            num = i
+#    return num
+
